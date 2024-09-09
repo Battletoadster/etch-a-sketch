@@ -5,8 +5,10 @@ html, body{
 
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 16px;
     background-color: bisque;
 }
 
@@ -15,10 +17,20 @@ body{
     flex-wrap: wrap;
     height: 100%;
     aspect-ratio: 1/1;
+    padding: 12px;
 }
 
 .square{
     background-color: beige;
-    flex: 1 0 calc(100%/16);
+    flex: 1;
     outline: 1px solid black;
+}
+
+.regen-btn{
+    margin-top: 24px;
+}
+
+
+.colored{
+    background-color: black;
 }
