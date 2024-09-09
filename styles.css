@@ -13,12 +13,12 @@ body{
 .grid-container{
     display: flex;
     flex-wrap: wrap;
-    width: 320px;
+    height: 100%;
+    aspect-ratio: 1/1;
 }
 
 .square{
     background-color: beige;
-    width: 20px;
-    height: 20px;
+    flex: 1 0 calc(100%/16);
     outline: 1px solid black;
 }
