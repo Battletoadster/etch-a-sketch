@@ -22,7 +22,7 @@ regenBtn.addEventListener("click", () => {
     }
     while (isNaN(gridSize) || typeof gridSize !== "number" || gridSize <= 0 || gridSize > 100);
 
-    while(gridContainer.firstChild){
+    while (gridContainer.firstChild) {
         gridContainer.removeChild(gridContainer.firstChild);
     }
 
@@ -32,35 +32,40 @@ regenBtn.addEventListener("click", () => {
 
 colorBtn.addEventListener("click", () => {
     squares = document.querySelectorAll("div.square");
-    for(const square of squares){
+    for (const square of squares) {
         square.removeEventListener("mouseover", blackMode);
         square.addEventListener("mouseover", colorMode);
     }
-    });
+});
 
 greyscaleBtn.addEventListener("click", () => {
     squares = document.querySelectorAll("div.square");
-    for(const square of squares){
+    for (const square of squares) {
         square.removeEventListener("mouseover", colorMode);
         square.addEventListener("mouseover", blackMode);
     }
 })
 
-function blackMode(event){
-    event.target.style.backgroundColor = "black";
+function blackMode(event) {
+    let opacity = parseFloat(window.getComputedStyle(event.target).opacity);
+    if ((opacity - 0.1) >= 0) {
+        event.target.style.opacity = (opacity-0.2).toString();
+    } else {
+        event.target.style.opacity = "0";
+    }
 }
 
-function colorMode(event){
-    let r = random(0,255);
-    let g = random(0,255);
-    let b = random(0,255);
+function colorMode(event) {
+    let r = random(0, 255);
+    let g = random(0, 255);
+    let b = random(0, 255);
     event.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 
 
 
 function random(min, max) {
-    const num = Math.floor(Math.random()* (max - min + 1)) + min;
+    const num = Math.floor(Math.random() * (max - min + 1)) + min;
     return num;
 }
 

@@ -17,7 +17,7 @@ body{
     flex-wrap: wrap;
     height: 100%;
     aspect-ratio: 1/1;
-    padding: 12px;
+    outline: 1px solid black;
 }
 
 .btn-container{
@@ -27,6 +27,7 @@ body{
 
 .square{
     background-color: rgb(228, 228, 228);
+    opacity: 1;
     flex: 1;
     outline: 1px solid black;
 }
