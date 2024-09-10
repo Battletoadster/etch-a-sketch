@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 16px;
-    background-color: bisque;
+    background-color: rgb(137, 137, 206);
 }
 
 .grid-container{
@@ -21,16 +21,17 @@ body{
 }
 
 .square{
-    background-color: beige;
+    background-color: rgb(228, 228, 228);
     flex: 1;
     outline: 1px solid black;
 }
 
 .regen-btn{
     margin-top: 24px;
+    border-radius: 4px;
 }
 
-
-.colored{
+.regen-btn:hover{
+    color: white;
     background-color: black;
 }

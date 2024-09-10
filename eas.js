@@ -22,12 +22,20 @@ function initializeGrid(rows, cols) {
             const square = document.createElement("div");
             square.classList.add("square");
             square.addEventListener("mouseover", () => {
-                square.classList.add("colored");
+                let r = random(0,255);
+                let g = random(0,255);
+                let b = random(0,255);
+                square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
             });
             square.style.flexBasis = `calc(100%/${rows})`;
             gridContainer.append(square);
         }
     }
+}
+
+function random(min, max) {
+    const num = Math.floor(Math.random()* (max - min + 1)) + min;
+    return num;
 }
 
 initializeGrid(16, 16);
