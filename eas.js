@@ -49,7 +49,7 @@ greyscaleBtn.addEventListener("click", () => {
 function blackMode(event) {
     let opacity = parseFloat(window.getComputedStyle(event.target).opacity);
     if ((opacity - 0.1) >= 0) {
-        event.target.style.opacity = (opacity-0.2).toString();
+        event.target.style.opacity = (opacity - 0.2).toString();
     } else {
         event.target.style.opacity = "0";
     }
@@ -70,10 +70,3 @@ function random(min, max) {
 }
 
 initializeGrid(16, 16);
-
-// square.addEventListener("mouseover", () => {
-//     let r = random(0,255);
-//     let g = random(0,255);
-//     let b = random(0,255);
-//     square.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-// });

@@ -1,9 +1,10 @@
-html, body{
+html,
+body {
     margin: 0;
     height: 100%;
 }
 
-body{
+body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -12,7 +13,7 @@ body{
     background-color: rgb(137, 137, 206);
 }
 
-.grid-container{
+.grid-container {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
@@ -20,34 +21,36 @@ body{
     outline: 1px solid black;
 }
 
-.btn-container{
+.btn-container {
     display: flex;
     gap: 32px;
 }
 
-.square{
+.square {
     background-color: rgb(228, 228, 228);
     opacity: 1;
     flex: 1;
     outline: 1px solid black;
 }
 
-.regen-btn{
+.regen-btn {
     margin-top: 24px;
     border-radius: 4px;
 }
 
-.grey-btn{
+.grey-btn {
     margin-top: 24px;
     border-radius: 4px;
 }
 
-.color-btn{
+.color-btn {
     margin-top: 24px;
     border-radius: 4px;
 }
 
-.regen-btn:hover, .color-btn:hover, .grey-btn:hover{
+.regen-btn:hover,
+.color-btn:hover,
+.grey-btn:hover {
     color: white;
     background-color: black;
 }
